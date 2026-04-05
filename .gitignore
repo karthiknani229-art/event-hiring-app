@@ -1,0 +1,14 @@
+# Node modules
+node_modules/
+
+# Next.js
+.next/
+
+# Environment variables
+.env
+
+# Logs
+npm-debug.log
+
+# OS files
+.DS_Store
