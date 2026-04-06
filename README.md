@@ -64,8 +64,11 @@ cd frontend
 npm install
 npm run dev
 🌐 Live Demo
+Backend API: https://event-hiring-app.onrender.com/api/events
+Frontend: https://frontend-eight-sigma-17.vercel.app/
+⚠️ Note
 
-Frontend: [Add your Vercel link here]
+The backend is hosted on Render's free tier, so it may take a few seconds to respond on the first request due to cold starts.
 
 🎥 Demo Video
 
