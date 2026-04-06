@@ -1,11 +1,13 @@
 import express from "express";
 const router = express.Router();
 
-router.post("/", (req, res) => {
-  console.log("ROUTE HIT");
-  console.log("BODY:", req.body);
-
-  res.json({ success: true });
+// ✅ GET all events (test route)
+router.get("/", async (req, res) => {
+  try {
+    res.json({ message: "Events API Working ✅" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
 export default router;
