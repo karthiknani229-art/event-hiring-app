@@ -1,147 +1,97 @@
-📄 Copy this (customized for you)
-# 🎉 Event Hiring App
+# Event Hiring App
 
-A full-stack application to create and manage event hiring requirements.
+A full-stack application to create and manage event-based hiring requirements with a multi-step form workflow.
 
-## 🚀 Tech Stack
+## Live Demo
 
-- Frontend: Next.js
-- Backend: Node.js, Express
-- Database: MongoDB
+- Frontend: https://frontend-eight-sigma-17.vercel.app/
+- Backend API: https://event-hiring-app.onrender.com/api/events
 
----
+> Note: Backend is on Render's free tier — first request may take 30–60 seconds due to cold start.
 
-## ✨ Features
+## Tech Stack
 
-### Step 1: Event Basics
-- Event name, type, date range
-- Location and optional venue
-- Select category (Planner / Performer / Crew)
+**Frontend:** Next.js, React.js
 
-### Step 2: Dynamic Fields
-- Planner → Budget, Guests
-- Performer → Performer Type, Duration
-- Crew → Crew Type, Members
+**Backend:** Node.js, Express.js
 
-### Step 3: Review & Edit
-- Users can review entered data before submission
+**Database:** MongoDB
 
-### Step 4: Submission
-- Data is sent to backend API
-- Stored in MongoDB with proper categorization
+**Deployment:** Vercel (Frontend), Render (Backend)
 
----
+## Features
 
-## 🔥 Additional Enhancements
+**Multi-step hiring form:**
 
-- Form validation (no empty fields)
-- Disabled buttons until valid
-- Loading state while submitting
-- Toast notifications (success/error)
-- Clean and responsive UI
+- Step 1 — Event basics: name, type, date range, location, venue, and category
+- Step 2 — Dynamic fields based on category:
+  - Planner → Budget, Guest count
+  - Performer → Performer type, Duration
+  - Crew → Crew type, Member count
+- Step 3 — Review entered data before submission
+- Step 4 — Submit to backend API and store in MongoDB
 
----
+**Form UX:**
+- Field validation with disabled submit until complete
+- Loading state during submission
+- Toast notifications for success and error states
+- Responsive UI
 
-## 📦 Project Structure
+## Project Structure
 
+```
+event-hiring-app/
+│
+├── frontend/          # Next.js UI
+│
+├── backend/           # Express API + MongoDB
+│   ├── routes/
+│   ├── controllers/
+│   ├── models/
+│   └── index.js
+│
+└── README.md
+```
 
-frontend/ → Next.js UI
-backend/ → Express API + MongoDB
+## Local Setup
 
+**1. Clone the repository**
 
----
+```bash
+git clone https://github.com/karthiknani229-art/event-hiring-app.git
+cd event-hiring-app
+```
 
-## ⚙️ Setup Instructions
-
-### Backend
+**2. Backend setup**
 
 ```bash
 cd backend
 npm install
 npm run dev
-Frontend
+```
+
+Create a `.env` file inside `/backend`:
+
+```
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+```
+
+**3. Frontend setup**
+
+```bash
 cd frontend
 npm install
 npm run dev
-🌐 Live Demo
-Backend API: https://event-hiring-app.onrender.com/api/events
-Frontend: https://frontend-eight-sigma-17.vercel.app/
-⚠️ Note
+```
 
-The backend is hosted on Render's free tier, so it may take a few seconds to respond on the first request due to cold starts.
+## Key Design Decisions
 
-🎥 Demo Video
+- Dynamic field rendering based on selected category avoids unnecessary form complexity
+- Flexible MongoDB schema using a `details` object handles varying category-specific fields
+- Review step before submission reduces incorrect entries
+- Validation applied at each step, not just on final submit
 
-[Add your recording link here]
+## Author
 
-🧠 Key Design Decisions
-Used dynamic rendering for category-based fields
-Structured flexible schema using details object
-Implemented validation for better UX
-Added review step to prevent incorrect submissions
-👨‍💻 Author
-
-Karthik
-
-
----
-
-# 🧠 Why this README matters
-
-Recruiters will:
-- Open repo  
-- Scroll README  
-- Decide in 10–20 seconds  
-
-👉 This makes you look **serious + structured**
-
----
-
-# 🚨 Step 5 — Add `.gitignore`
-
-Make sure you don’t upload junk:
-
-
-node_modules
-.env
-.next
-
-
----
-
-# 🚀 Step 6 — Final Check
-
-Your repo should:
-- ✅ Build without errors  
-- ✅ Clear structure  
-- ✅ Clean README  
-- ✅ No unnecessary files  
-
----
-
-# 🔥 Pro Tip (this matters)
-
-Rename repo if needed:
-
-👉 `event-hiring-app` (clean name)
-
----
-
-# 🎯 After GitHub
-
-Next:
-
-1. Deploy frontend (Vercel)  
-2. Deploy backend  
-3. Record video  
-4. Submit  
-
----
-
-# 👉 Next Step
-
-Say:
-
-**“deploy frontend on vercel”**
-
-We’ll make your live link ready in 5 minutes 🚀
+Penta Karthik — [GitHub](https://github.com/karthiknani229-art)
